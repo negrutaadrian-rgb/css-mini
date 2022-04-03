@@ -1,0 +1,169 @@
+
+body {
+	background-color: lightsteelblue;
+}	
+
+/* body > header  */
+.first{
+
+	position: fixed;
+	width: 100%; /* Largeur de la page */
+	height: 2.4rem; /* en haut */
+	background: rgba(255,255,255,0.85);
+	text-align: center;
+	z-index: 10;
+	border-bottom: gray thick solid;
+	
+	
+	
+	
+}
+
+body > header h1 {
+	font-family: "Verdana", "Geneva",sans-serif;
+	font-size: 2rem;
+	border-bottom-style: solid;
+	border-bottom-width: medium;
+	border-color: gray;
+	margin: 0;
+}
+
+
+
+	
+
+
+.last {
+	position: fixed;
+	width: 100%;
+	height: 2.4rem;
+	color: rgba(255,255,255,0.85);
+	z-index: 10;
+	text-align: center;
+	border-top: gray thick solid;
+}
+
+
+
+main{
+	margin:3rem 0;
+	padding: 1rem 0;
+	display: flex;
+	align-items: flex-start;
+	flex-wrap: wrap;
+	
+}
+
+	
+article{
+
+	border-radius: 1rem;
+	box-shadow: 0 0 1rem gray;
+	padding: 1rem;
+	
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	
+	width: calc(100% - 2rem);
+	height: 1.8rem;
+	
+	position: relative;
+	
+	background: rgba(255,255,255,0.85);
+	
+}
+	
+
+article:hover {
+	height: 25rem;
+	overflow: auto;
+	
+	flex-direction: column;
+	flex-grow: 1;
+	flex-wrap: nowrap;
+	
+	z-index: 20;
+	background: white;
+}
+
+
+article > p {
+	display: none;
+}
+
+
+article > header > h2 {
+	font-size: 1.5rem;
+	margin: 0;
+}
+
+article > footer {
+	margin-left: auto;
+}
+
+
+article > footer > img {
+	width: 3.8rem;
+	height: 3.8rem;
+	position: relative;
+	top: -1rem;
+	box-shadow: 0 0 0.2rem black;
+}
+
+article:hover > p {
+	display: initial;
+}
+
+
+article:hover > footer{
+	order: 2;
+	text-align: center;
+	margin: 0 auto;
+}
+
+
+
+	
+
+article:hover > footer > img {
+	width: 30rem;
+	height: auto;
+	top: 0;
+}
+
+article, article * {
+	transition: height  1s;
+}
+
+article:hover, article:hover * {
+	transition: all 1s;
+}
+
+main > div {
+	width: 30rem;
+	margin: 0 2rem 2rem 0;
+	padding: 0;
+	height: calc(1.8rem + 2rem);
+	flex-grow: 1;
+
+
+}
+
+@media (max-width: 32rem){
+	article > header > h2{
+		font-size: 1rem;
+		}
+	
+	article > p {
+		max-width: 80%;
+		}
+
+	article > footer > img {
+		max-width: 80%;
+		}
+
+	body > footer {
+		font-size: 0.7rem;
+	}
+}
